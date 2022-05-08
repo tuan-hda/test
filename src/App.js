@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <img
-      className={`${loaded ? '' : 'none'}`}
+      className={`${loaded ? '' : 'hidden'}`}
       src={'https://tophinhanhdep.com/wp-content/uploads/2021/10/Free-4K-Wallpapers.jpg'}
       alt='landscape'
       loading='lazy'
