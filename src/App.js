@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import SpinWheel from './pexels-christian-heitz-842711.jpg'
 
-function App() {
+const App = () => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <img
+      className={`${loaded ? '' : 'none'}`}
+      src={SpinWheel}
+      alt='landscape'
+      loading='lazy'
+      onLoadedData={() => setLoaded(true)}
+    />
+  )
 }
 
-export default App;
+export default App
