@@ -5,14 +5,15 @@ import SpinWheel from './pexels-christian-heitz-842711.jpg'
 const App = () => {
   const [loaded, setLoaded] = useState(false);
 
-  return (
+  return (<div>
+    <button onClick={() => setLoaded(true)}>a</button>
     <img
       className={`${loaded ? '' : 'hidden'}`}
-      src={'https://tophinhanhdep.com/wp-content/uploads/2021/10/Free-4K-Wallpapers.jpg'}
+      src={SpinWheel}
       alt='landscape'
-      loading='lazy'
-      onLoadedData={() => setLoaded(true)}
+      onLoad={() => setLoaded(true)}
     />
+  </div>
   )
 }
 
